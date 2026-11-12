@@ -1,4 +1,12 @@
-# amplydata.http
+# Amply Data
+
+## Índice das APIs
+
+- [Autenticar — POST /v1/auth](#autenticar)
+- [Recuperar senha — POST /v1/auth/forgot](#recuperar-senha)
+- [Validar token — POST /v1/auth/valid](#validar-token)
+- [Listar empresas — GET /v1/company/all](#listar-empresas)
+- [Consultar dashboard — GET /v1/dashboard/main](#consultar-dashboard)
 
 Coleção de requisições HTTP para documentação e testes manuais das APIs da plataforma Amply Data. Os endpoints disponíveis nesta coleção estão na pasta [`http`](http).
 
