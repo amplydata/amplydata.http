@@ -1,0 +1,31 @@
+### Autenticar
+POST {{baseUrl}}/v1/auth
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "{{username}}",
+  "password": "{{password}}"
+}
+
+> {%
+    const data = response.body;
+
+    client.global.set("token", data.token);
+%}
+
+### Esqueci minha senha
+POST {{baseUrl}}/v1/auth/forgot
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "{{username}}"
+}
+
+### Validar Token
+POST {{baseUrl}}/v1/auth/valid
+Accept: application/json
+Content-Type: application/json
+
+{"token": {{token}}}

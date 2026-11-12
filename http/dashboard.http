@@ -1,0 +1,7 @@
+### Obter dashboard do usuário
+GET {{baseUrl}}/v1/dashboard/main
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+{}

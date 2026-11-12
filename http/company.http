@@ -1,0 +1,5 @@
+### Obter todas as companies
+GET {{baseUrl}}/v1/company/all
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
