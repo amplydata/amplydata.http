@@ -23,6 +23,26 @@ Content-Type: application/json
   "email": "{{username}}"
 }
 
+### Solicitar Pin
+POST {{baseUrl}}/v1/auth/pin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "{{username}}"
+}
+
+### Alterar senha com Pin
+PUT {{baseUrl}}/v1/auth/changepasswordwithpin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "{{username}}",
+  "pin": "855028",
+  "password": "senha123"
+}
+
 ### Validar Token
 POST {{baseUrl}}/v1/auth/valid
 Accept: application/json
