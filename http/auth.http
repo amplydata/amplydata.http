@@ -39,8 +39,8 @@ Content-Type: application/json
 
 {
   "email": "{{username}}",
-  "pin": "855028",
-  "password": "senha123"
+  "pin": "{{pin}}",
+  "password": "{{newPassword}}"
 }
 
 ### Validar Token
@@ -48,4 +48,6 @@ POST {{baseUrl}}/v1/auth/valid
 Accept: application/json
 Content-Type: application/json
 
-{"token": {{token}}}
+{
+  "token": "{{token}}"
+}

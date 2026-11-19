@@ -1,5 +1,102 @@
-### Obter todas as companies
+### Listar contas com paginação
+GET {{baseUrl}}/v1/account?registers=10&page=1
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+### Obter todas as contas
 GET {{baseUrl}}/v1/account/all
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+### Obter conta por ID
+GET {{baseUrl}}/v1/account/{{idAccount}}
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+### Criar conta
+POST {{baseUrl}}/v1/account
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+{
+  "name": "Conta de teste",
+  "email": "{{accountEmail}}",
+  "password": "{{newPassword}}"
+}
+
+### Atualizar conta
+PUT {{baseUrl}}/v1/account
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+{
+  "id": "{{idAccount}}",
+  "name": "Conta de teste atualizada"
+}
+
+### Atualizar minha conta
+PUT {{baseUrl}}/v1/account/updatemyaccount
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+{
+  "name": "Meu nome atualizado"
+}
+
+### Vincular dashboard à conta
+POST {{baseUrl}}/v1/account/dashboard/add
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+{
+  "idAccount": "{{idAccount}}",
+  "idDashboard": "{{idDashboard}}"
+}
+
+### Remover dashboard da conta
+POST {{baseUrl}}/v1/account/dashboard/remove
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+{
+  "idAccount": "{{idAccount}}",
+  "idDashboard": "{{idDashboard}}"
+}
+
+### Vincular perfil à conta na empresa
+POST {{baseUrl}}/v1/account/profile/add
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+{
+  "idAccount": "{{idAccount}}",
+  "idCompany": "{{idCompany}}",
+  "idProfile": {{idProfile}}
+}
+
+### Remover perfil da conta na empresa
+POST {{baseUrl}}/v1/account/profile/remove
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+{
+  "idAccount": "{{idAccount}}",
+  "idCompany": "{{idCompany}}",
+  "idProfile": {{idProfile}}
+}
+
+### Excluir conta
+DELETE {{baseUrl}}/v1/account/{{idAccount}}
 Accept: application/json
 Content-Type: application/json
 token: {{token}}

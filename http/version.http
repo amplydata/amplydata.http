@@ -1,0 +1,4 @@
+ ### Obter versão da API
+GET {{baseUrl}}/v1/version
+Accept: application/json
+Content-Type: application/json

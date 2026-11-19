@@ -1,4 +1,4 @@
-### Obter todas os perfis
+### Obter todos os perfis
 GET {{baseUrl}}/v1/profile
 Accept: application/json
 Content-Type: application/json

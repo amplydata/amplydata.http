@@ -1,5 +1,51 @@
-### Obter todas as companies
+### Listar empresas com paginação
+GET {{baseUrl}}/v1/company?registers=10&page=1
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+### Obter todas as empresas
 GET {{baseUrl}}/v1/company/all
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+### Obter empresa por ID
+GET {{baseUrl}}/v1/company/cd80ec7594c6ed430d17fb
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+### Obter empresa por documento
+GET {{baseUrl}}/v1/company/document/29.476.788/0001-99
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+### Criar empresa
+POST {{baseUrl}}/v1/company
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+{
+  "name": "Empresa de teste",
+  "document": "{{companyDocument}}"
+}
+
+### Atualizar empresa
+PUT {{baseUrl}}/v1/company
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+{
+  "id": "{{idCompany}}",
+  "name": "Empresa de teste atualizada"
+}
+
+### Excluir empresa
+DELETE {{baseUrl}}/v1/company/{{idCompany}}
 Accept: application/json
 Content-Type: application/json
 token: {{token}}
