@@ -28,7 +28,9 @@ Selecione o ambiente no cliente HTTP e execute **Autenticar** em [auth.http](htt
 
 Preencha os IDs com os registros retornados pelas listagens. Mantenha `idProfile` como número e `pin` como texto, inclusive quando começar com zero. Use o PIN recebido ao executar **Solicitar PIN**. A variável `newPassword` é usada na criação de conta e na alteração de senha por PIN.
 
-As listagens paginadas de contas e empresas exemplificam `registers=10&page=1` e aceitam o parâmetro opcional `search`. Os exemplos de criação, atualização, exclusão e vínculo alteram dados do ambiente selecionado.
+As listagens paginadas de contas, empresas, planos, cidades e status de contrato exemplificam `registers=10&page=1` e aceitam o parâmetro opcional `search`. Os exemplos de criação, atualização, exclusão e vínculo alteram dados do ambiente selecionado.
+
+As duas listagens de cidades aceitam o filtro opcional `idState`. Para planos e status de contrato, autentique-se com a empresa selecionada.
 
 ## Endpoints
 
@@ -61,3 +63,9 @@ As listagens paginadas de contas e empresas exemplificam `registers=10&page=1` e
 | `POST` | `/v1/dashboard/{idDashboard}` | [Consultar dados do dashboard do usuário](http/dashboard.http) | `basic` |
 | `GET` | `/v1/profile` | [Obter todos os perfis](http/profile.http) | `company_management` |
 | `GET` | `/v1/version` | [Obter versão da API](http/version.http) | Pública |
+| `GET` | `/v1/plan` | [Listar planos com paginação](http/plan.http) | Token válido |
+| `GET` | `/v1/plan/all` | [Obter todos os planos](http/plan.http) | Token válido |
+| `GET` | `/v1/city` | [Listar cidades com paginação](http/city.http) | Token válido |
+| `GET` | `/v1/city/all` | [Obter todas as cidades](http/city.http) | Token válido |
+| `GET` | `/v1/contractstatus` | [Listar status de contrato com paginação](http/contractstatus.http) | Token válido |
+| `GET` | `/v1/contractstatus/all` | [Obter todos os status de contrato](http/contractstatus.http) | Token válido |

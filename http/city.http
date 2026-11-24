@@ -1,0 +1,11 @@
+### Listar cidades com paginação
+GET {{baseUrl}}/v1/city?registers=10&page=1
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+### Obter todas as cidades
+GET {{baseUrl}}/v1/city/all
+Accept: application/json
+Content-Type: application/json
+token: {{token}}

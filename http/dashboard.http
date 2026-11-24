@@ -10,4 +10,10 @@ Accept: application/json
 Content-Type: application/json
 token: {{token}}
 
-{}
+{
+  "startDate": "2026-11-01",
+  "endDate": "2026-11-30",
+  "idCity": "59328475-0234750-234985903428",
+  "idPlan": "6947350-23845209385390-",
+  "idStatus": "60945702348523975238"
+}

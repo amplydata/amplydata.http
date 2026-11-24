@@ -1,0 +1,11 @@
+### Listar planos com paginação
+GET {{baseUrl}}/v1/plan?registers=10&page=1
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+### Obter todos os planos
+GET {{baseUrl}}/v1/plan/all
+Accept: application/json
+Content-Type: application/json
+token: {{token}}

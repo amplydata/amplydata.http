@@ -1,0 +1,11 @@
+### Listar status de contrato com paginação
+GET {{baseUrl}}/v1/contractstatus?registers=10&page=1
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
+
+### Obter todos os status de contrato
+GET {{baseUrl}}/v1/contractstatus/all
+Accept: application/json
+Content-Type: application/json
+token: {{token}}
