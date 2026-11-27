@@ -14,13 +14,18 @@ token: {{token}}
   "params": [
     {
       "name": "startDate",
-      "value": "01/11/2026 00:00:00",
+      "value": "02/11/2026 00:00:00",
       "type": "timestamp"
     },
     {
       "name": "endDate",
       "value": "30/11/2026 23:59:59",
       "type": "timestamp"
+    },
+    {
+      "name": "idCity",
+      "value": "45osihkts1q7g1k7195dcm",
+      "type": "varchar"
     }
   ]
 }
